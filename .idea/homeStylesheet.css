@@ -14,8 +14,7 @@ body {
 
 div#parent { /* Declaration or "selector" */
     border: 2px solid #292626;
-    width: 750px;
-    height: 720px;
+    width: 780px;
     margin: 0 auto;
     background-color: #fff;
 }
@@ -26,13 +25,12 @@ div#parent section {}
 
 section.heading {
     position: relative;
-    height: 75px;
+    height: 100px;
     width: 100%;
-    background-color: #566421;
+    background-color: #60663E;
 
     display: flex;
     align-items: center;
-    justify-content: center;
 }
 
 section.heading * {
@@ -43,21 +41,10 @@ section.heading * {
     line-height: 95%;
 }
 
-section.heading h2 {
-    font-family: 'Trajan', "Times New Roman" , sans-serif;
-
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    font-size: 10px;
-    font-weight: lighter;
-
-    padding-bottom: 10px;
-}
-
 section.heading .decor {
     height: 6px;
     position: absolute;
-    top: 60%;
+    top: 50%;
     width: 90%;
     left: 0;
     border-right: 1px solid white;
@@ -70,29 +57,60 @@ section.heading .decor hr {
     top: 50%;
 }
 
+section.heading .title {
+    position: relative;
+
+    margin: 0 40px;
+    letter-spacing: 5px;
+
+    padding-left: 5px;
+    background-color: #60663E;
+}
+
+section.heading p {
+    font-family: 'Myriad', 'Segoe UI', sans-serif;
+    font-size: 10px;
+}
+
+section.heading h1 {
+    font-family: 'Trajan', "Times New Roman" , sans-serif;
+
+    font-size: 45px;
+    font-weight: lighter;
+}
+
+section.heading h2 {
+    font-family: 'Trajan', "Times New Roman" , sans-serif;
+
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 10px;
+    font-weight: lighter;
+
+    align-self: center;
+    padding-top: 30px;
+}
+
 section.heading img {
     position: absolute;
     height: 100px;
     right: -10px;
-    top: 0;
 }
 
 section.sub-head {
     font-family: 'Trajan', "Times New Roman" , sans-serif;
 
-    background-image: url('files/histBooks01.jpg');
+    background-image: url('../humis-homePage/files/histHomepic.jpg');
     background-repeat: no-repeat;
     background-position: center;
-    height: 75px;
+    height: 50px;
 
-    border-top: 15px solid #c3102f;
+    border-top: 7px solid #C1102F;
 }
 
 hr {
     padding: 0;
-    margin: 0;
-    height: 5px;
-    background-color: #8b9155;
+    margin: 1px;
     border: none;
 }
 
@@ -101,41 +119,72 @@ section.main-content-area { /* declaration for a section tag whose class is "mai
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-image: url('files/uofu_medallion_rt.gif');
+    background-image: url('../humis-homePage/files/uofu_medallion_rt.gif');
     background-repeat: no-repeat;
     background-position: bottom right;
 
-    section.content {
-        background-color: #ffffff;
+    nav.secondary { /* applies to all nav tags found inside (descendants of) section.main-content-area */
+        min-height: 20px;
+        padding-right: 20px;
+        font-size: 11px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 3px;
+
+        a { /* this targets all links in each of our navs */
+            margin: 0 5px;
+            color: black;
+            text-decoration: none;
+            text-transform: uppercase;
+
+            &:hover { /* Pseudo-class declaration */
+                text-decoration: underline;
+            }
+        }
+        .links {
+            height: 15px;
+            padding-top: 3px;
+        }
+
+        &.bottom {
+            font-size: 9px;
+            a {
+                text-transform: lowercase;
+            }
+        }
+    }
+
+    section.brown-box {
+        background-color: #BEC3A1;
+        padding: 20px;
         border-radius: 10px;
+        min-height: 400px;
         display: flex;
         justify-content: space-between;
+        width: 90%;
+        margin: 5px auto 70px;
 
         .left-side {
-            width: 25%;
+            width: 30%;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            background-color: #f2f3f4;
-            padding: 2.5%;
-
-            border-right: 1px solid #8b9155;
-
 
             nav {
-                padding: 0 ;
+                padding: 0 12px;
                 a {
                     color: black;
                     display: block;
                     text-decoration: none;
-                    border-bottom: 2px solid #566421;
+                    border-bottom: 2px solid #60663e;
                     padding: 0.7em 1em;
                     text-transform: uppercase;
                     font-size: .65em;
 
                     &:hover {
                         color: white;
-                        background-color: #566421;
+                        background-color: #60663e;
                     }
                 }
             }
@@ -183,113 +232,57 @@ section.main-content-area { /* declaration for a section tag whose class is "mai
         }
 
         .right-side {
+            text-indent: 20px;
+            width: 65%;
             background-color: white;
+            padding: 10px;
+
             display: flex;
             flex-direction: column;
-            width: 70%;
 
-            nav.secondary { /* applies to all nav tags found inside (descendants of) section.main-content-area */
-                min-height: 20px;
-                padding-right: 20px;
-                font-size: 11px;
-                display: flex;
-                justify-content: flex-end;
-                align-items: center;
-                gap: 3px;
+            img {
+                width: 100%;
+                border-radius: 15px;
+            }
 
-                a { /* this targets all links in each of our navs */
-                    margin: 0 5px;
-                    color: black;
-                    text-decoration: none;
-                    text-transform: uppercase;
+            h4 {
+                color: #60663e;
+                border-bottom: 2px dotted #C1102F;
+                font-weight: unset;
+                font-size: .8em;
+                text-transform: uppercase;
+                margin: 0;
+                padding: 2px;
+            }
 
-                    &:hover { /* Pseudo-class declaration */
-                        text-decoration: underline;
-                    }
-                }
-                .links {
-                    height: 15px;
-                }
-
-                &.bottom {
-                    font-size: 9px;
-                    a {
-                        text-transform: lowercase;
-                    }
-                }
-
-                & img{
-                    height: 15px;
-                    width: 15px;
-
-                }
+            p {
+                font-size: 10px;
+                text-align: justify;
+                margin: 2px;
             }
 
 
+            div.more {
+                display: flex;
+                justify-content: flex-end;
 
-            .right-content {
-                padding: 8%;
-
-                h1 {
-                    color: #c3102f;
-                    font-weight: bold;
-                    font-size: 1.2em;
+                a {
+                    color: #C1102F;
                     text-transform: uppercase;
-                    margin: 0;
-                    padding: 2px;
-                }
+                    text-decoration: none;
+                    font-size: 9px;
 
-                .visual {
-                    float: right;
-                    width: 40%;
-                    margin-left: 20px;
-
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    text-align: center;
-
-                    & img {
-                        border-radius: 10%;
-                    }
-
-                    & a {
-                        font-size: 1em;
-                        font-weight: bold;
-                        letter-spacing: 1px;
-                        text-align: center;
-                        margin: 5px;
-                        text-transform: uppercase;
-                        color: #c3102f;
-                    }
-
-                }
-
-                p {
-                    font-size: .8em;
-                    text-align: justify;
-                    text-justify: inter-word;
-                    line-height: 1;
-
-                }
-
-                .visual:hover {
-                    & a {
+                    &:hover {
                         text-decoration: underline;
                     }
-
-                    & img{
-                        opacity: 0.8;
-                    }
                 }
-
             }
         }
     }
 }
 
 section.footer {
-    background-color: #566421;
+    background-color: #60663E;
     text-align: center;
     color: white;
     font-size: .5em;
